@@ -1,0 +1,149 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+@font-face {
+    font-family: cute;
+    src: url(fonts/Coco-Gothic-Regular-trial.ttf);
+}
+
+body{
+    background: linear-gradient(117deg, rgb(63, 54, 70) 0%, rgb(17, 12, 20) 68%, rgb(18, 11, 24) 100%);
+    overflow: hidden;
+}
+
+nav{
+    background-color: rgba(255,255,255,0.2);
+    height: fit-content;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    z-index: 1;
+}
+
+nav a{
+    position: relative;
+    text-decoration: none;
+    color: white;
+    font-family: cute;
+    margin: 5px;
+    left: 2%;
+}
+
+.text{
+    position: relative;
+    color: white;
+    font-family: cute;
+    font-size: 35px;
+    left: 33%;
+    top: 100px;
+    z-index: 1;
+}
+
+.bodies{
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.galaxy{
+    position: relative;
+    background-image: url(images/bhanim.gif);
+    width: 200px;
+    height: 200px;
+    transform: scale(500%);
+    left: 1200px;
+    bottom: 480px;
+    animation: galaxymot 5s linear infinite;
+}
+
+
+.star{
+    position: relative;
+    background-image: url(images/staranim.gif);
+    width: 300px;
+    height: 300px;
+    right: 30%;
+    bottom: 570px;
+    animation: starmot 20s linear infinite;
+    z-index: 0;
+    animation-delay: 2s;
+}
+
+.earth{
+    position: relative;
+    background-image: url(images/earthanim.gif);
+    width: 200px;
+    height: 200px;
+    left: 150%;
+    top: 0px;
+    animation: planetmot 60s linear infinite;
+    z-index: -1;
+    opacity: 40%;
+    animation-delay: 20s;
+    
+}
+
+.blkhole{
+    position: relative;
+    background-image: url(images/saturnanim.gif);
+    width: 350px;
+    height: 350px;
+    transform: scale(90%);
+    right: 40%;
+    bottom: 80px;
+    animation: blkholemot 40s linear infinite;
+    z-index: 0;
+    animation-delay: 15s;
+}
+
+#stars{
+    background: black url(images/stars.png);
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -20;
+}
+#twinkling{
+    display: inline-block;
+    width:100%;
+	height: 100%;
+	background: transparent url(images/twinkling.png);
+    position: absolute;
+    animation: sparkle 20s linear infinite;
+    z-index: -19;
+}
+
+@keyframes starmot{
+    0%  {transform:translate(0px, -100px);}
+    90%{opacity: 100%;}
+    100%{transform:translate(2000px, 500px);}
+    100% {opacity: 0%;}
+}
+@keyframes planetmot{
+    0%  {transform:scale(4);}
+    100%{transform:translate(-5000px, 0px);}
+  }
+@keyframes galaxymot{
+    0%{transform: scale(4);}
+    50%{transform: scale(6);}
+    100%{transform: scale(4);}
+}
+
+@keyframes blkholemot{
+    0%  {transform:scale(2)}
+    100%{transform:translate(1000px, -750px);}
+}
+
+@keyframes sparkle{
+    0%{transform:translate(0px, 0px);}
+    100%{transform:translate(500px, 0px);}
+}
+
+body{min-height: 100vh;}
+header{min-height: 50vh;}
+footer{min-height: 50vh;}
+body{display: flex; flex-direction: column;}
+article{flex: 1;}
