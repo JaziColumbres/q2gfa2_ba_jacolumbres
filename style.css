@@ -5,145 +5,421 @@
 
 @font-face {
     font-family: cute;
-    src: url(fonts/Coco-Gothic-Regular-trial.ttf);
+    src: url(fonts/Sweet\ Cupcake\ demo.ttf);
+}
+@font-face {
+    font-family: cute2;
+    src: url(fonts/DK\ Rabbit\ On\ The\ Moon.otf);
 }
 
-body{
-    background: linear-gradient(117deg, rgb(63, 54, 70) 0%, rgb(17, 12, 20) 68%, rgb(18, 11, 24) 100%);
-    overflow: hidden;
+/*start of index*/
+body#ind{
+    background: linear-gradient(to right,#DEDBD2  0%,#DEDBD2 50%,#B0C4B1 50%,#B0C4B1 100%);
+    overflow-x: hidden;
 }
 
-nav{
-    background-color: rgba(255,255,255,0.2);
-    height: fit-content;
-    padding-top: 15px;
-    padding-bottom: 15px;
-    z-index: 1;
-}
-
-nav a{
-    position: relative;
-    text-decoration: none;
-    color: white;
-    font-family: cute;
-    margin: 5px;
-    left: 2%;
-}
-
-.text{
-    position: relative;
-    color: white;
-    font-family: cute;
-    font-size: 35px;
-    left: 33%;
-    top: 100px;
-    z-index: 1;
-}
-
-.bodies{
-    display: inline-block;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-}
-
-.galaxy{
-    position: relative;
-    background-image: url(images/bhanim.gif);
-    width: 200px;
-    height: 200px;
-    transform: scale(500%);
-    left: 1200px;
-    bottom: 480px;
-    animation: galaxymot 5s linear infinite;
-}
-
-
-.star{
-    position: relative;
-    background-image: url(images/staranim.gif);
-    width: 300px;
-    height: 300px;
-    right: 30%;
-    bottom: 570px;
-    animation: starmot 20s linear infinite;
-    z-index: 0;
-    animation-delay: 2s;
-}
-
-.earth{
-    position: relative;
-    background-image: url(images/earthanim.gif);
-    width: 200px;
-    height: 200px;
-    left: 150%;
-    top: 0px;
-    animation: planetmot 60s linear infinite;
-    z-index: -1;
-    opacity: 40%;
-    animation-delay: 20s;
-    
-}
-
-.blkhole{
-    position: relative;
-    background-image: url(images/saturnanim.gif);
-    width: 350px;
-    height: 350px;
-    transform: scale(90%);
-    right: 40%;
-    bottom: 80px;
-    animation: blkholemot 40s linear infinite;
-    z-index: 0;
-    animation-delay: 15s;
-}
-
-#stars{
-    background: black url(images/stars.png);
-    display: inline-block;
+.navbar{
+    background-color: #EDAFB8;
     width: 100%;
-    height: 100%;
+    height: 8vh
+}
+.navbar a{
+    color: #79434B;
+    background-color: rgba(247, 225, 215, .6) ;
+    font-family: cute;
+    text-decoration: none;
+    text-align: center;
+    padding: 7px;
+    width: 100px;
+}
+.dropd{
+    display: none;
+    background-color: rgba(247, 225, 215, .6);
+    color: #79434B;
+    font-family: cute;
+    text-align: center;
+    padding: 7px;
+}
+.dropd:hover{background-color: rgba(247, 225, 215, 1);}
+
+.home{
     position: absolute;
-    z-index: -20;
+    left: 32%;
+    top: 1.5%;
 }
-#twinkling{
-    display: inline-block;
-    width:100%;
-	height: 100%;
-	background: transparent url(images/twinkling.png);
+.home:hover{background-color: rgba(247, 225, 215, 1);}
+
+.what{
     position: absolute;
-    animation: sparkle 20s linear infinite;
-    z-index: -19;
+    left: 46%;
+    top: 1.5%;
+}
+.what:hover{background-color: rgba(247, 225, 215, 1);}
+
+.about{
+    position: absolute;
+    left: 60.1%;
+    top: 1.5%;
+}
+.about:hover{background-color: rgba(247, 225, 215, 1);}
+
+
+.banner{
+    position: absolute;
+    display: flex;
+    background-image: url(images/red\ panda\ bannerr.jpg);
+    top: 10%;
+    width: 100%;
+    height: 30vh;
+    z-index: -10;
+    border: 4px solid #79434B;
 }
 
-@keyframes starmot{
-    0%  {transform:translate(0px, -100px);}
-    90%{opacity: 100%;}
-    100%{transform:translate(2000px, 500px);}
-    100% {opacity: 0%;}
-}
-@keyframes planetmot{
-    0%  {transform:scale(4);}
-    100%{transform:translate(-5000px, 0px);}
-  }
-@keyframes galaxymot{
-    0%{transform: scale(4);}
-    50%{transform: scale(6);}
-    100%{transform: scale(4);}
+.banner p{
+    position: absolute;
+    top: 24%;
+    left: 5%;
+    font-family: cute2;
+    color: #79434B;
+    font-size: 10vh;
 }
 
-@keyframes blkholemot{
-    0%  {transform:scale(2)}
-    100%{transform:translate(1000px, -750px);}
+.mid{
+    position: absolute;
+    display: inline-flex;
+    text-align: justify;
+    font-family: cute;
+    gap: 5vw;
+    left: 2vw;
+    top: 47vh;
 }
 
-@keyframes sparkle{
-    0%{transform:translate(0px, 0px);}
-    100%{transform:translate(500px, 0px);}
+.backg{
+    width: 45vw;
+    color: #6D6753;
+}
+.backg h1{
+    font-family: cute2;
+    font-size: 6vh;
+    color: #3d392a;
+}
+.done{
+    width: 45vw;
+    color: #445245;
+}
+.done h2{
+    font-family: cute2;
+    font-size: 6vh;
+    color: #344635;
+    text-align: left;
+}
+/*end of index*/
+
+/*start of what page*/
+body#wh{
+    background-color: #DEDBD2;
+    overflow-x: hidden;
 }
 
-body{min-height: 100vh;}
-header{min-height: 50vh;}
-footer{min-height: 50vh;}
-body{display: flex; flex-direction: column;}
-article{flex: 1;}
+.content{
+    display: inline-flex;
+    position: absolute;
+    font-family: cute;
+    left: 5vw;
+    top: 12vh;
+    gap: 4vw;
+    z-index: -10;
+}
+.left{
+    display: flex;
+    flex-direction: column;
+    width: 50vw;
+    gap: 5vh;
+}
+.right{
+    width: 36vw;
+}
+
+.init{
+    color: #6D6753;;
+}
+#w{
+    font-family: cute2;
+    font-size: 6vh;
+    color: #3d392a;;
+}
+.inv{
+    background-color: #4A5759;
+    color: #E5F4E0;
+    padding: 2vw;
+    height: 56.9vh;
+}
+.inv video{
+    position: relative;
+    width: 37vw;
+    left: 9.9vh;
+}
+#w2{
+    font-family: cute2;
+    font-size: 6vh;
+}
+.anp{
+    background-color: #B0C4B1;
+    color:  #466448;
+    padding: 2vw;
+    margin-right: 1vw;
+    height: fit-content;
+}
+#w3{
+    font-family: cute2;
+    font-size: 6vh;
+    color: #2b3f2c;
+}
+/*end of what page*/
+
+/*start of about page*/
+body#abt{
+    background: linear-gradient(to right,#DEDBD2  0%,#DEDBD2 50%,#B0C4B1 50%,#B0C4B1 100%);
+    overflow-x: hidden;
+}
+
+.cont{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    font-family: cute;
+    left: 4vw;
+    gap: 4vw;
+    text-align: justify;
+    top: 14vh;
+}
+.cont p{
+    word-break: break-all;
+}
+
+.left2{
+    display: inline-flex;
+    flex-direction: column;
+    width: 50vw;
+    gap: 22vh;
+}
+
+.who{
+    color: #6D6753;
+}
+.who p{
+    width: 42vw;
+}
+.who h2{
+    color: #3d392a;;
+}
+
+.help{
+    position: absolute;
+    border: 2px solid #a08072;
+    background-color: #F7E1D7;
+    color: #372016;
+    width: 34vw;
+    padding: 5vh;
+    top: 35vh;
+    height: fit-content;
+}
+
+.right2{
+    width: 50vw;
+}
+
+.vision{
+    position: relative;
+    width: 42vw;
+    color: #466448;
+}
+.vision h2{
+    color: #304b32;
+}
+.mission{
+    position: absolute;
+    background-color: #4A5759;
+    width: 50vw;
+    right: 3.4vw;
+    top: 32vh;
+    height: 60vh;
+    color: #E5F4E0;
+}
+.mission p{
+    position: relative;
+    width: 35vw;
+    left: 4vw;
+    top: 8vh;
+}
+.mission h2{
+    position: relative;
+    left: 8vh;
+    top: 8vh;
+}
+
+#a, #a2, #a3, #a4{
+    font-family: cute2;
+    font-size: 6vh;
+    text-align: left;
+}
+
+.rp{
+    position: absolute;
+    background-image: url(images/red\ panda.png);
+    width: 670px;
+    height: 560px;
+    left: 20vw;
+    transform: scale(0.2);
+    top: 17vw;
+    animation: rprotate 20s infinite;
+}
+@keyframes rprotate{
+    0%{rotate: 0deg;}
+    100%{rotate: 360deg;}
+}
+/*responsive/mobile*/
+@media screen and (max-width: 800px){
+    /*navigation bar*/
+    .dropd{
+        display: block;
+        width: 20vh;
+        opacity: 100%;
+        position: absolute;
+        left: 37%;
+        top: 15%;
+    }
+    .dropdown{
+        position: relative;
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+    .dropdc{
+        display: none;
+        box-shadow: 9vh 9.8vh 0px 15vh rgb(172, 117, 129);
+    }
+    .dropdc a{
+        float: none;
+        display: block;
+        text-align: left;
+        width: 20vh;
+        background-color: rgba(247, 225, 215, 1);
+        
+    }
+    .home{
+        position: absolute;
+        left: 37%;
+        top: 8vh;
+    }
+    .what{
+        position: absolute;
+        left: 37%;
+        top: 13vh;
+    }
+    .about{
+        position: absolute;
+        left: 37%;
+        top: 18vh;
+    }
+
+    /*home page*/
+    body#ind{
+        height: 180vh;
+        background: linear-gradient(#DEDBD2 93vh, #B0C4B1 34vh);
+    }
+
+    .mid{
+        flex-wrap: wrap;
+        flex-direction: column;
+        left: 27vw;
+        gap: 15vh;
+    }
+    .backg h1{
+        text-align: center;
+    }
+    .done h2{
+        text-align: center;
+    }
+
+    /*what page*/
+    body#wh{
+        height: 100%;
+    }
+
+    .content{
+        flex-direction: column;
+    }
+
+    .left{
+        width: 87vw;
+    }
+
+    .right{
+        width: 87vw;
+    }
+
+    #w, #w2, #w3{
+        text-align: center;
+    }
+
+    .inv video{
+        width: 67vw;
+        left: 7vh;
+    }
+
+    /*about page*/
+    body#abt{
+        height: 100%;
+        background: linear-gradient(#DEDBD2 93vh, #B0C4B1 34vh);
+    }
+
+    .cont{
+        flex-direction: column;
+        gap: 90vh;
+    }
+
+    .who p{
+        width: 84vw;
+    }
+
+    .help{
+        width: 78vw;
+    }
+
+    .help h2{
+        width: 90vw;
+    }
+    .help p{
+        width: 80vw;
+    }
+
+    .vision{
+        position: relative;
+        width: 80vw;
+    }
+    .mission{
+        position: relative;
+        width: 100vw;
+    }
+
+    .mission h2{
+        text-align: left;
+        position: relative;
+        right: 12vw;
+    }
+    .mission p{
+        position: relative;
+        width: 80vw;
+
+    }
+
+    .rp{
+        position: absolute;
+        top: 205vw;
+    }
+
+    .dropdc a:hover {background-color: rgb(247, 215, 215);}
+    .dropdown:hover .dropdc {display: block; z-index: 1000;}
+    .dropd:hover {background-color: rgba(247, 225, 215, 1)}
+}
